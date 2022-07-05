@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        background-color: hsl(229, 57%, 11%);
+        margin: 0px;
+        padding: 0px;
+      }
+      .bg-image {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .container {
+        width: 60vw;
+        height: 40vh;
+        position: relative;
+        margin: 30vh auto;
+        z-index: 2;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      .fylo {
+        background-color: hsl(228, 56%, 26%);
+        position: absolute;
+        width: 23vw;
+        height: 25vh;
+        border-radius: 10px 100px 10px 10px;
+      }
+      .fylo-head {
+        margin-left: 2rem;
+        margin-top: 1.5rem;
+      }
+      .fylo-logos {
+        margin: 0.5rem;
+        /* width: 30px;  */
+      }
+      .fylo-content {
+        display: flex;
+        margin-left: 2rem;
+        margin-top: 2rem;
+      }
+      .logo-container {
+        background-color: hsl(229, 57%, 11%);
+        margin: 0.3rem;
+        border-radius: 25%;
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+      }
+      .logo-container img {
+        position: absolute;
+        left: 35%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+      }
+      .storage-bar {
+        background-color: hsl(228, 56%, 26%);
+        position: absolute;
+        width: 34vw;
+        height: 20vh;
+        left: 25vw;
+        top: 5vh;
+        border-radius: 10px;
+      }
+      .storage-content {
+        margin: 2rem;
+      }
+      .storage-content p{
+        color: #fff;
+        font-weight: 200;
+        font-size: 14px;
+      }
+      .gradient-bar-container {
+        background-color: hsl(229, 57%, 11%);
+        height: 2vh;
+        border-radius: 1.1vh;
+        padding: 0.2vh;
+      }
+      .gradient-bar {
+        background: linear-gradient(
+          90deg,
+          hsl(6, 100%, 80%),
+          hsl(335, 100%, 65%)
+        );
+        height: 2vh;
+        width: 81.5%;
+        border-radius: 1vh;
+        display: flex;
+      }
+      .scale-point {
+        background-color: #fff;
+        width: 0.8rem;
+        height: 1.6vh;
+        margin-top: 0.2vh;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: 0.2rem;
+      }
+      .scales {
+        display: flex;
+        justify-content: space-between;
+      }
+      .scales p {
+        margin: 3px;
+        color: #fff;
+        font-size: 12px;
+      }
+
+      .talk-bubble {
+  display: inline-block;
+  position: relative;
+	width: 175px;
+	height: 70px;
+	background-color: #fff;
+  border-radius: 10px 10px 0px 10px;
+  margin-left: 46vw;
+  margin-top: -4vh;
+}
+
+.tri-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 0px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+.talktext{
+	text-align: center;
+  font-size: 12px;
+  color:hsl(229, 7%, 55%) ;
+  font-weight: 700;
+}
+.talktext span{
+  font-size: 32px;
+  color: #000000;
+}
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        src="../fylo-data-storage-component-master/images/bg-desktop.png"
+        alt="bg-image"
+        class="bg-image"
+      />
+    </div>
+    <div class="container">
+      <div class="fylo">
+        <div class="fylo-head">
+          <img
+            src="../fylo-data-storage-component-master/images/logo.svg"
+            alt="fylo-head-logo"
+          />
+        </div>
+        <div class="fylo-content">
+          <div class="logo-container">
+            <img
+              src="../fylo-data-storage-component-master/images/icon-document.svg"
+              alt="document-logo"
+              class="fylo-logos"
+            />
+          </div>
+          <div class="logo-container">
+            <img
+              src="../fylo-data-storage-component-master/images/icon-folder.svg"
+              alt="folder-logo "
+              class="fylo-logos"
+            />
+          </div>
+          <div class="logo-container">
+            <img
+              src="../fylo-data-storage-component-master/images/icon-upload.svg"
+              alt="upload-logo"
+              class="fylo-logos"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="storage-bar">
+        <div class="storage-content">
+          <p>You’ve used <b>815 GB</b> of your storage</p>
+          <div class="gradient-bar-container">
+            <div class="gradient-bar">
+              <div class="scale-point"></div>
+            </div>
+            <div class="scales">
+              <p>0 GB</p>
+              <p>1000 GB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="bubble" class="talk-bubble tri-right btm-right">
+        <div class="talktext">
+          <p><span>185</span> GB LEFT</p>
+        </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
